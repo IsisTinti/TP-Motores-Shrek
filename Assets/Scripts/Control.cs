@@ -19,7 +19,6 @@ public class Control
         if (h != 0 || v != 0)
         {
             _movement.Move(v, h);
-           
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

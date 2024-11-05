@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: f7ec7e364db60294bbeace2856c60112, type: 3}
   m_Sun: {fileID: 762071236}
-  m_IndirectSpecularColor: {r: 0.81920123, g: 0.9349344, b: 1.0414908, a: 1}
+  m_IndirectSpecularColor: {r: 0.81838405, g: 0.9337713, b: 1.0412453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1552,7 +1552,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198798686}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
@@ -1672,6 +1672,10 @@ PrefabInstance:
     - target: {fileID: 4307756348346272, guid: 2003259857fd3f940bcd53bbb9131ca9, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198239243270670624, guid: 2003259857fd3f940bcd53bbb9131ca9, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 199771129012251256, guid: 2003259857fd3f940bcd53bbb9131ca9, type: 3}
       propertyPath: m_Materials.Array.size
