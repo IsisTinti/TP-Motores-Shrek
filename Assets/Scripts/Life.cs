@@ -9,19 +9,23 @@ public class Life
     int _damage;
     int _upgradeLifeQuantity;
 
-    public Life(int maxlife, int life, int damage, int upgradeLifeQuantity)
+    public Life(int maxlife, int upgradeLifeQuantity)
     {
         _maxlife = maxlife;
-        _life = life;
-        _damage = damage;
+        _life = maxlife;
         _upgradeLifeQuantity = upgradeLifeQuantity;
 
     }
 
-    public  void TakeDamage()
+    public void TakeDamage(int dmg)
     {
-        _life -= _damage;
-      
+        _life -= dmg;
+
+        if (_life <= 0)
+        {
+            Death();
+        }
+
     }
 
     public void GetLife()
@@ -38,12 +42,12 @@ public class Life
 
     public void Death()
     {
-        //print("na de locos te moriste xd");
+        Debug.Log("na de locos te moriste xd");
     }
 
     public void UpgradeLife()
     {
         _maxlife += _upgradeLifeQuantity;
-       // print("Upgrade de vida! ahora tu vida maxima es de " + _maxlife);
+       Debug.Log("Upgrade de vida! ahora tu vida maxima es de " + _maxlife);
     }
 }

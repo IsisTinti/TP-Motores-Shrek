@@ -38,7 +38,7 @@ public class Player : MonoBehaviour, IDamageable
     {
         _movement = new Movement(transform, rb, speed, forceJump);
         _control = new Control(_movement);
-        _life = new Life(maxlife, life, damage, upgradeLifeQuantity);
+        _life = new Life(maxlife, upgradeLifeQuantity);
 
     }
 
@@ -51,18 +51,18 @@ public class Player : MonoBehaviour, IDamageable
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            _life.TakeDamage();
-            print("sufriste " + damage + " de daño! ahora tu vida es de " + life);
+            _life.TakeDamage(damage);
+            Debug.Log("sufriste " + damage + " de daño! ahora tu vida es de " + life);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             _life.GetLife();
-            print("recibiste 15 de vida ahora tu vida es de " + life);
+            Debug.Log("recibiste 15 de vida ahora tu vida es de " + life);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            print(life);
+            Debug.Log(life);
         }
     }
 
@@ -96,11 +96,7 @@ public class Player : MonoBehaviour, IDamageable
 
     public void TakeDamage(int Damage)
     {
-        _health -= damage;
-        if (_health <= 0)
-        {
-            gameObject.SetActive(false);
-        }
+       _life.TakeDamage(Damage);
     }
 
     public Transform GetTransform()

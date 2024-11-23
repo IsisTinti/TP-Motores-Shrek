@@ -545,8 +545,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9523b753c2d494a9f9aa625a4da5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1174010504057010334}
+  UpdateRate: 0.1
   Target: {fileID: 1174010504057010334}
   UpdateSpeed: 0.1
+  Animator: {fileID: 0}
 --- !u!195 &298650889
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1069,6 +1072,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551860350}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &738272325 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7328494371683867764, guid: 0e0a2846ae26249458880ac3b38757d6, type: 3}
+  m_PrefabInstance: {fileID: 7099762055896179563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862864559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2148,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626833379049677390, guid: 0e0a2846ae26249458880ac3b38757d6, type: 3}
+      propertyPath: life
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626833379049677390, guid: 0e0a2846ae26249458880ac3b38757d6, type: 3}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626833379049677390, guid: 0e0a2846ae26249458880ac3b38757d6, type: 3}
+      propertyPath: maxlife
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626833379049677390, guid: 0e0a2846ae26249458880ac3b38757d6, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 738272325}
+    - target: {fileID: 1626833379049677390, guid: 0e0a2846ae26249458880ac3b38757d6, type: 3}
+      propertyPath: upgradeLifeQuantity
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3772644993522936633, guid: 0e0a2846ae26249458880ac3b38757d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 71.13
